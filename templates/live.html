@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <a href="{{ url_for("index") }}" class="btn btn-warning home">Home</a>
+    <a href="{{ url_for("live") }}" class="btn btn-info refresh">Refresh</a>
+
+    <table class="world">
+        {% for i in obj_life.world %}
+            <tr>
+                {% for j in i %}
+                    {% if j == 1 %}
+                        <td class="cell living-cell"></td>
+                    {% else %}
+                        <td class="cell"></td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script> setInterval(() => window.location.reload(), 1500); </script>
+{% endblock %}
+
