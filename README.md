@@ -9,7 +9,9 @@ A simple cellular automaton that implements the following rules of life:
 
 
 #### It all looks something like this:
-![img](./docs/exmpl.gif "how it works" )
+
+<img src="https://github.com/Di-peep/Simple-cellular-automaton/blob/master/docs/exmpl.gif" alt="how it works" width="560" height="440" />
+
 
 
 ## Settings
