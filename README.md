@@ -13,5 +13,13 @@ A simple cellular automaton that implements the following rules of life:
 <img src="https://github.com/Di-peep/Simple-cellular-automaton/blob/master/docs/exmpl.gif" alt="how it works" width="560" height="440" />
 
 
-
+##
 ## Settings
+
+> I was using Google Chrome 103.0.5060.114
+
+> Also you can find requirements.txt
+
+Set up the variable: `set FLASK_APP=app.py`
+
+Just run: `flask run`
