@@ -3,18 +3,19 @@ from flask import Flask, render_template
 from game_of_life import GameOfLife
 
 app = Flask(__name__)
-# GameOfLife(25, 25)
 
 
 @app.route('/')
 def index():
-    GameOfLife()
+    GameOfLife(20, 15)
     return render_template('index.html')
 
 
 @app.route('/live')
 def live():
-    obj_life = GameOfLife(20, 15)
+    # if you pass arguments to the constructor, then each time a new object will be created
+    # so the arguments are passed in the index function and here the singleton property is used
+    obj_life = GameOfLife()
     obj_life.form_new_generation()
     return render_template('live.html', obj_life=obj_life)
 
