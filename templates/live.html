@@ -6,11 +6,13 @@
     <div class="counter">{{ obj_life.counter_generation }}</div>
 
     <table class="world">
-        {% for i in obj_life.world %}
+        {% for i in range(obj_life.world|length) %}
             <tr>
-                {% for j in i %}
-                    {% if j == 1 %}
+                {% for j in range(obj_life.world[i]|length) %}
+                    {% if obj_life.world[i][j] == 1 %}
                         <td class="cell living-cell"></td>
+                    {% elif obj_life.world[i][j] == 0 and obj_life.old_world[i][j] == 1 %}
+                        <td class="cell dead-cell"></td>
                     {% else %}
                         <td class="cell"></td>
                     {% endif %}
