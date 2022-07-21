@@ -1,7 +1,7 @@
 # Simple-cellular-automaton
 
 A simple cellular automaton that implements the following rules of life:
-* life _begins_ in an empty (or dead) cell next to which there are 3 living cells.
+* life _begins_ in an empty (or dead) cell next to which there are 3 living cells
 * a cell _will be alive_ if it has 2 or 3 live neighboring cells
 * a cell _will die_ if it has less than 2 or more than 3 living neighboring cells
 
