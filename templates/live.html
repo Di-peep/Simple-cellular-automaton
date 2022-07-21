@@ -3,6 +3,7 @@
 {% block app_content %}
     <a href="{{ url_for("index") }}" class="btn btn-warning home">Home</a>
     <a href="{{ url_for("live") }}" class="btn btn-info refresh">Refresh</a>
+    <div class="counter">{{ obj_life.counter_generation }}</div>
 
     <table class="world">
         {% for i in obj_life.world %}
